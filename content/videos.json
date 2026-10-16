@@ -1,0 +1,86 @@
+{
+  "co-evo": [
+    {
+      "type": "mp4",
+      "src": "/assets/videos/co-evo-01.mp4",
+      "name": "co-evo毕业展",
+      "duration": 84.78,
+      "width": 1280,
+      "height": 194,
+      "bytes": 16949210,
+      "hasAudio": true
+    }
+  ],
+  "odyssey": [
+    {
+      "type": "hls",
+      "src": "/assets/videos/odyssey/index.m3u8",
+      "name": "启 odyssey",
+      "duration": 728.62,
+      "width": 960,
+      "height": 478,
+      "bytes": 87930777,
+      "hasAudio": true,
+      "segments": 92
+    }
+  ],
+  "awakening": [
+    {
+      "type": "mp4",
+      "src": "/assets/videos/awakening-01.mp4",
+      "name": "吴晓波秀 虚拟圆桌",
+      "duration": 46.44,
+      "width": 1280,
+      "height": 720,
+      "bytes": 8530072,
+      "hasAudio": true
+    },
+    {
+      "type": "mp4",
+      "src": "/assets/videos/awakening-02.mp4",
+      "name": "吴晓波秀 觉醒",
+      "duration": 149.01,
+      "width": 1280,
+      "height": 720,
+      "bytes": 17848218,
+      "hasAudio": true
+    }
+  ],
+  "nuoyu": [
+    {
+      "type": "hls",
+      "src": "/assets/videos/nuoyu/index.m3u8",
+      "name": "傩屿 • 织械创生",
+      "duration": 621.96,
+      "width": 960,
+      "height": 480,
+      "bytes": 74444699,
+      "hasAudio": true,
+      "segments": 78
+    }
+  ],
+  "taiwan-chronicle": [],
+  "journey-beyond": [],
+  "boundless-ocean": [
+    {
+      "type": "mp4",
+      "src": "/assets/videos/boundless-ocean-01.mp4",
+      "name": "微信视频2026-10-16_051001_948",
+      "duration": 22.78,
+      "width": 1280,
+      "height": 720,
+      "bytes": 4259964,
+      "hasAudio": true
+    },
+    {
+      "type": "mp4",
+      "src": "/assets/videos/boundless-ocean-02.mp4",
+      "name": "海洋博物馆 现场视频",
+      "duration": 54.49,
+      "width": 1280,
+      "height": 720,
+      "bytes": 10702649,
+      "hasAudio": true
+    }
+  ]
+}
