@@ -22,4 +22,5 @@
   });
  });
  document.querySelectorAll('video').forEach(video=>video.addEventListener('play',()=>{document.querySelectorAll('video').forEach(other=>{if(other!==video)other.pause()})}));
+ document.querySelectorAll('.external-play').forEach(button=>button.addEventListener('click',()=>{const holder=button.closest('.external-player');const frame=document.createElement('iframe');frame.src=holder.dataset.player;frame.title='台湾岛纪 · 第1集 — 哔哩哔哩播放器';frame.allow='fullscreen; picture-in-picture; encrypted-media';frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';holder.replaceChildren(frame);frame.focus()}));
 })();

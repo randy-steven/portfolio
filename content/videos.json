@@ -59,7 +59,14 @@
       "segments": 78
     }
   ],
-  "taiwan-chronicle": [],
+  "taiwan-chronicle": [
+    {
+      "type": "bilibili",
+      "name": "台湾岛纪 · 第1集",
+      "src": "https://player.bilibili.com/player.html?episodeId=3250369&autoplay=0&danmaku=0",
+      "watchUrl": "https://www.bilibili.com/bangumi/play/ep3250369/"
+    }
+  ],
   "journey-beyond": [],
   "boundless-ocean": [
     {
