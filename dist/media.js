@@ -11,7 +11,7 @@
  box.querySelector('.lightbox-prev').addEventListener('click',()=>step(-1));box.querySelector('.lightbox-next').addEventListener('click',()=>step(1));
  box.addEventListener('keydown',event=>{if(event.key==='ArrowLeft'){event.preventDefault();step(-1)}if(event.key==='ArrowRight'){event.preventDefault();step(1)}});
  let runtime;
- function loadHls(){if(window.Hls)return Promise.resolve(window.Hls);if(!runtime)runtime=new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='/assets/vendor/hls.light.min.js';script.onload=()=>resolve(window.Hls);script.onerror=()=>{runtime=null;script.remove();reject(Error('播放器加载失败'))};document.head.append(script)});return runtime}
+ function loadHls(){if(window.Hls)return Promise.resolve(window.Hls);if(!runtime)runtime=new Promise((resolve,reject)=>{const script=document.createElement('script'),base=document.querySelector('meta[name="portfolio-base"]')?.content||'';script.src=`${base}/assets/vendor/hls.light.min.js`;script.onload=()=>resolve(window.Hls);script.onerror=()=>{runtime=null;script.remove();reject(Error('播放器加载失败'))};document.head.append(script)});return runtime}
  document.querySelectorAll('video[data-hls]').forEach(video=>{
   const button=video.parentElement.querySelector('.stream-start'),status=video.closest('figure').querySelector('.video-status');let hls;
   button.addEventListener('click',async()=>{

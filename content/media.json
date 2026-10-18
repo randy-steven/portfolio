@@ -1816,11 +1816,12 @@
     "cover": {
       "src": "/assets/projects/boundless-ocean/cover.webp",
       "thumbnail": "/assets/projects/boundless-ocean/cover-thumb.webp",
-      "width": 1280,
-      "height": 720,
+      "width": 1206,
+      "height": 677,
       "thumbnailWidth": 800,
-      "thumbnailHeight": 450,
-      "source": "海洋博物馆 现场视频.mp4 / 00:09"
+      "thumbnailHeight": 449,
+      "sourceOriginal": "D:\\GAFA\\网站作品集\\无界之海  沉浸式AIGC海洋博物馆\\微信图片_20260310173354_83_4.png",
+      "source": "微信图片_20260310173354_83_4.png"
     }
   }
 }

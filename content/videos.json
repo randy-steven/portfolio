@@ -71,16 +71,6 @@
   "boundless-ocean": [
     {
       "type": "mp4",
-      "src": "/assets/videos/boundless-ocean-01.mp4",
-      "name": "微信视频2026-10-16_051001_948",
-      "duration": 22.78,
-      "width": 1280,
-      "height": 720,
-      "bytes": 4259964,
-      "hasAudio": true
-    },
-    {
-      "type": "mp4",
       "src": "/assets/videos/boundless-ocean-02.mp4",
       "name": "海洋博物馆 现场视频",
       "duration": 54.49,

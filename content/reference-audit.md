@@ -58,3 +58,15 @@ The downloaded Craftwork reference image is 1440×1080. Pixel-threshold measurem
 
 ## Local evidence
 index.html; 4bcd59accba7cea4.css; css-readable.txt; page-7f0a7120f50f3ebb.js; layout-5761c08d56e768a0.js; 8635.80ce73395dfc772c.js (desktop nav); 7674.94114d09fb271cb3.js (mobile nav); webpack-08d24b97171362e4.js; browser home-1440/768/390.json collected by root agent.
+
+
+## 2026-10-17 项目入口复核
+
+直接访问 /projects/xylo，在 1440×1000 和 390×844 截图，另滚动 850px 检查概述。入口为 100svh 主视觉，h1 居中，桌面标题矩形 x271.66 y436.20 w896.69 h127.59；真实类声明 font-mabry、6.6rem、1.1 行高。主图在初始视口的矩形为 1440×1000。下方黑底 Project Overview 双栏，先客户与年份，再介绍正文，再媒体网格与下一项目。没有强行改成弹窗或伪造标签页；本站采用相同的独立开场层次，并增添章节跳转满足长篇项目资料阅读。原站视频在本次网络环境下未全部加载，媒体内容细节不据空载尺寸复刻。Craftwork 页面抓取失败，使用其指向的真实站点复核。
+
+
+## 2026-10-17 黄色转场节奏复核
+
+从真实 /projects 页面点击 XYLO，记录到 View Transition：旧文档 opacity 1→0、translateY 0→-35%；新文档从底部揭示，二者 1200ms、cubic-bezier(.87,0,.13,1)。页面背景 rgb(221,250,66)，黄色由页面交接露出，并非固定高度的整屏停驻。逐帧证据见 review/reference-route.json 与 reference-route-*.png。
+
+本站按用户要求做更快的 transform/opacity 适配：黄色最大覆盖 65dvh（本站设计值，不是参考站 CSS 数值），入场 220ms，揭幕短停 80ms 后上拉 500ms，沿用原站缓动。主图与文字分别延迟 180ms / 300ms 出现，保持减少动态效果支持。

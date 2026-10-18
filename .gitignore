@@ -1,6 +1,7 @@
 node_modules/
 .openai/*credential*
 .openai/local/
+.openai/hosting.json
 review/
 *.zip
 *.tar

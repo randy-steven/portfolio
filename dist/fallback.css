@@ -1,0 +1,10 @@
+/* Without scripting the same seven projects remain available as ordinary links. */
+.home-page .exhibition{height:auto;min-height:100svh;padding:var(--header-clearance) var(--gutter) var(--space-8)}
+.home-page .site-header{position:absolute}.home-intro,.edge-shade{display:none}
+.gallery,.gallery-track{position:relative;inset:auto;transform:none}
+.gallery-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}
+.gallery-card{position:relative;left:auto;top:auto;transform:none;width:100%;z-index:auto}
+.gallery-card:not([data-row="2"]){display:none}.card-caption{opacity:1;transform:none}
+.home-footer{position:relative;left:auto;right:auto;bottom:auto;margin-top:var(--space-7)}
+.gallery-card:hover .card-surface{transform:none}.sound-toggle{display:none}
+@media(max-width:767px){.gallery-track{grid-template-columns:1fr}}
