@@ -78,7 +78,7 @@
 @media(prefers-reduced-motion:reduce){.home-page .exhibition{height:auto;min-height:100svh;padding:var(--header-clearance) var(--gutter) var(--space-10)}.gallery,.gallery-track{position:relative;inset:auto;transform:none}.gallery-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-5)}.gallery-card,.motion-enabled .gallery-card{position:relative;left:auto;top:auto;transform:none;width:100%;z-index:auto}.gallery-card:not([data-row="2"]){display:none}.gallery-card:hover .card-surface{transform:none}.home-intro,.edge-shade{display:none}.home-footer{position:relative;left:auto;right:auto;bottom:auto;margin-top:var(--space-7)}.home-page .site-header{position:absolute}.route-leaving #main{transform:none;opacity:1}.card-caption{opacity:1;transform:none}.opening-title,.opening-image{animation:none}}
 @media(prefers-reduced-motion:reduce) and (max-width:767px){.gallery-track{grid-template-columns:1fr}}
 /* Single diagonal exhibition queue, matching the supplied arrangement. */
-:root{--gallery-card-width:clamp(330px,32vw,500px);--panel-depth:4px;--panel-ratio:1.45;--panel-edge:#aeb8c02e;--panel-glint:#ffffff52;--panel-shadow:8px 16px 45px #0008;--panel-hover-x:64px;--queue-yaw:24deg;--queue-roll:0deg;--motion-curtain-cover:120ms;--motion-curtain-reveal:200ms;--motion-title-delay:20ms;--motion-gallery-arrive:650ms;--delay-gallery-arrive:80ms;--z-curtain:200;--color-transition:#ddfa42}
+:root{--gallery-card-width:clamp(330px,32vw,500px);--panel-depth:4px;--panel-ratio:1.45;--panel-edge:#aeb8c02e;--panel-glint:#ffffff52;--panel-shadow:8px 16px 45px #0008;--panel-hover-x:64px;--queue-yaw:24deg;--queue-roll:0deg;--motion-curtain-cover:90ms;--motion-curtain-reveal:150ms;--motion-title-delay:0ms;--motion-gallery-arrive:650ms;--delay-gallery-arrive:80ms;--z-curtain:200;--color-transition:#ddfa42}
 .gallery-track{transform:none}.gallery-card,.motion-enabled .gallery-card{left:52%;top:52%;transform:translate(-50%,-50%) translate3d(var(--card-x,calc(var(--order)*var(--gallery-card-width)*.43)),var(--card-y,calc(var(--order)*var(--gallery-card-width)*-.331)),0) perspective(var(--gallery-perspective)) rotateY(var(--queue-yaw)) rotateZ(var(--queue-roll)) scale(var(--card-scale,1));filter:none;animation:none}
 .card-surface{padding:0;filter:brightness(.9)}.acrylic-edge{box-shadow:none}.gallery-card:hover,.gallery-card:focus-visible{z-index:150!important}.gallery-card:hover .card-surface,.gallery-card:focus-visible .card-surface{transform:translate3d(var(--panel-hover-x),0,55px)}
 .home-intro{top:24%;padding:0;background:none;border:0;max-width:28%;opacity:.85}.home-intro h1{font-size:var(--text-sm);max-width:13em;line-height:var(--leading-copy)}.home-intro .eyebrow{font-size:var(--text-2xs);color:var(--color-muted)}.home-footer{background:none;padding:0;border-radius:0;left:var(--gutter);right:var(--gutter);bottom:var(--space-5)}.edge-shade{z-index:160;background:linear-gradient(to bottom,var(--color-bg),transparent 12%,transparent 88%,var(--color-bg))}.home-footer,.home-intro{z-index:170}
@@ -111,8 +111,11 @@
 @media(prefers-reduced-motion:reduce){.gallery-project-label{display:none}}
 
 /* Full-screen yellow handoff: immediate, fast upward reveal, followed by image and type. */
-:root{--motion-curtain-hold:0ms;--motion-image-delay:0ms;--motion-route-content:220ms;--ease-curtain:cubic-bezier(.4,0,.2,1)}
+:root{--motion-curtain-hold:0ms;--motion-image-delay:0ms;--motion-route-content:180ms;--ease-curtain:cubic-bezier(.4,0,.2,1)}
 .route-arriving:not(.route-revealing) .opening-image{animation:none;opacity:0}
 .route-revealing .opening-image{animation:opening-in var(--motion-route-content) var(--ease-curtain) var(--motion-image-delay) both}
 .route-leaving #main{transform:translateY(-8vh);opacity:.35;transition:transform var(--motion-curtain-cover) var(--ease-standard),opacity var(--motion-curtain-cover) var(--ease-standard)}
 @media(prefers-reduced-motion:reduce){.route-arriving .opening-image{opacity:1}.route-leaving #main{transform:none;opacity:1}}
+
+@keyframes curtain-lift{from{transform:translateY(0)}to{transform:translateY(-101%)}}
+.route-arriving .route-curtain{animation:curtain-lift var(--motion-curtain-reveal) var(--ease-curtain) var(--motion-curtain-hold) both}
