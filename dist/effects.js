@@ -44,8 +44,10 @@
   const url=new URL(link.href,location.href);if(link.classList.contains('home-symbol')&&url.pathname===location.pathname){event.preventDefault();window.dispatchEvent(new Event('portfolio:reveal'));return}if(url.origin!==location.origin||url.pathname===location.pathname||!['http:','https:'].includes(url.protocol))return;
   event.preventDefault();navigateWithCurtain(url);
  });
- // pageshow also fires when the browser restores a page from its back/forward cache.
- window.addEventListener('pageshow',revealPage);
+ // Reveal as soon as markup is ready; waiting for pageshow also waits for image loads.
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',revealPage,{once:true});else revealPage();
+ // DOMContentLoaded does not fire again after a back/forward-cache restore.
+ window.addEventListener('pageshow',event=>{if(event.persisted)revealPage()});
  window.addEventListener('pagehide',()=>{curtainAnimation?.cancel();root.classList.remove('route-leaving','route-revealing');if(!reduce.matches)root.classList.add('route-arriving');context?.close().catch(()=>{})});
  reduce.addEventListener('change',()=>{if(reduce.matches){curtainAnimation?.cancel();root.classList.remove('route-arriving','route-revealing','route-leaving')}});
 })();
