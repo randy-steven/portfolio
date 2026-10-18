@@ -24,13 +24,6 @@
  function revealPage(){
   clearTimeout(window.routeFallback);if(enabled)void unlock();navigating=false;curtainAnimation?.cancel();root.classList.remove('route-leaving');
   if(reduce.matches){root.classList.remove('route-arriving','route-revealing');return}
-  if(root.classList.contains('route-arriving')&&root.classList.contains('route-revealing')){
-   window.dispatchEvent(new Event('portfolio:reveal'));
-   const earlyReveal=curtain.getAnimations().find(animation=>animation.animationName==='curtain-lift');
-   const finish=()=>{root.classList.remove('route-arriving');burst(innerWidth*.5,innerHeight*.42)};
-   if(!earlyReveal||earlyReveal.playState==='finished')finish();else earlyReveal.addEventListener('finish',finish,{once:true});
-   return
-  }
   root.classList.add('route-arriving');root.classList.remove('route-revealing');
   requestAnimationFrame(()=>{root.classList.add('route-revealing');window.dispatchEvent(new Event('portfolio:reveal'));curtainAnimation=curtain.animate([{transform:`translateY(${curtainRest})`},{transform:'translateY(-101%)'}],{duration:revealDuration,delay:revealHold,easing:curtainEase,fill:'both'});curtainAnimation.onfinish=()=>{root.classList.remove('route-arriving');curtainAnimation.cancel();burst(innerWidth*.5,innerHeight*.42)}});
  }
